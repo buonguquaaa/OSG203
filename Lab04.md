@@ -3,23 +3,19 @@
 - Khi chúng ta chạy lệnh xterm thì os sẽ dùng toàn bộ tài nguyên cho cửa sổ terminal để nuôi cửa sổ xterm màu trắng
 Khi này thằng terminal – bash sẽ rơi với trạng thái “bị chiếm dụng” hay đợi
 Đây là ví dụ
-<img width="604" height="303" alt="image" src="https://github.com/user-attachments/assets/5af72c3e-42fd-49ae-88ea-4ac43b766945" />
 
 
 -Can you access your original terminal window?
 Sau khi xoá xterm hoặc bấm ctrl+d thì
 Có thể thấy sau khi chạy dòng lệnh xterm – nó sẽ xuất hiện ô cmd màu trắng, và lúc này cmd – bash đã đơ ko thể thêm lệnh.
 Đây là sau khi đã end lệnh, mọi thứ quay trở lại hoạt động bình thường.
-<img width="599" height="209" alt="image" src="https://github.com/user-attachments/assets/8e7bb806-dec4-47b3-b974-a1424226a3ab" />
 
 b.
 - What message do you receive in your original window?
 Đây là thông báo mà tôi nhận được khi bấm vào ctrl+z ở cmd đang chạy xterm
-<img width="551" height="84" alt="image" src="https://github.com/user-attachments/assets/2544b79b-5281-4ba0-85b7-4ecb526821f1" />
 
 - What happens? (use the xterm window)
 Lúc này sẽ không thể thao tác lệnh trong cửa sổ xterm ( màu trắng) nữa
-<img width="595" height="313" alt="image" src="https://github.com/user-attachments/assets/292ceeca-9a84-47e0-8f57-768ec8606625" />
 
 - Khi bấm Ctrl + Z, ta đã gửi một tín hiệu sigstop tới tiến trình xterm, nó sẽ ko tắt đi như khi ta dùng ctrl + c mà nó rơi vào trạng thái ‘ngủ đông’. OS sẽ giữ nguyên trạng thái của nó nhưng ko cung cấp tài nguyên CPU để nó xử lí bất kì thao tác nào nữa.
 c.
