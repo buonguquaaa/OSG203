@@ -1,5 +1,5 @@
 1.
-- What What happens when you attempt to use that terminal window?
+- What 'What happens when you attempt to use that terminal window?'
 - Khi chúng ta chạy lệnh xterm thì os sẽ dùng toàn bộ tài nguyên cho cửa sổ terminal để nuôi cửa sổ xterm màu trắng
 Khi này thằng terminal – bash sẽ rơi với trạng thái “bị chiếm dụng” hay đợi
 Đây là ví dụ
