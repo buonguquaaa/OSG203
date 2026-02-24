@@ -1,8 +1,15 @@
-1.
+/1.
+
+
+<img width="665" height="449" alt="image" src="https://github.com/user-attachments/assets/e02d6ee7-4931-44ef-9639-07c9cf8c8c09" />
+
 - What 'What happens when you attempt to use that terminal window?'
 - Khi chúng ta chạy lệnh xterm thì os sẽ dùng toàn bộ tài nguyên cho cửa sổ terminal để nuôi cửa sổ xterm màu trắng
 Khi này thằng terminal – bash sẽ rơi với trạng thái “bị chiếm dụng” hay đợi
 Đây là ví dụ
+
+<img width="660" height="434" alt="image" src="https://github.com/user-attachments/assets/03b02d8f-c31d-45c7-abff-94961268929f" />
+
 
 
 -Can you access your original terminal window?
@@ -10,9 +17,15 @@ Sau khi xoá xterm hoặc bấm ctrl+d thì
 Có thể thấy sau khi chạy dòng lệnh xterm – nó sẽ xuất hiện ô cmd màu trắng, và lúc này cmd – bash đã đơ ko thể thêm lệnh.
 Đây là sau khi đã end lệnh, mọi thứ quay trở lại hoạt động bình thường.
 
+<img width="640" height="277" alt="image" src="https://github.com/user-attachments/assets/a65d4f8a-a152-4e64-a11b-239dde521de2" />
+
+
 b.
 - What message do you receive in your original window?
 Đây là thông báo mà tôi nhận được khi bấm vào ctrl+z ở cmd đang chạy xterm
+
+<img width="679" height="71" alt="image" src="https://github.com/user-attachments/assets/ecf617e3-14f5-4661-85af-e87497082fe3" />
+
 
 - What happens? (use the xterm window)
 Lúc này sẽ không thể thao tác lệnh trong cửa sổ xterm ( màu trắng) nữa
@@ -25,16 +38,35 @@ c.
 + Bên cạnh cột ID chính là status của nó, đa số là stopped( vì bạn đang bấm ctrl+z)
 + Các sign ‘+’ và ‘-‘, dấu + ở job (top) chỉ ra đây là tiến trình mặc định, sẽ được đưa trở lại foreground nếu b gõ lệnh fg, dấu – chỉ ra tiến trình sẽ được ưu tiên tiếp theo nếu tiến trình dấu + kết thúc.
 
+<img width="346" height="140" alt="image" src="https://github.com/user-attachments/assets/b9002fb5-3be7-4192-add6-d5624b785f7c" />
+
+
+<img width="307" height="47" alt="image" src="https://github.com/user-attachments/assets/779c0b81-47c3-4c40-b9ad-3cb5a12a9c7b" />
+
+
+
 - How did you do this?
 Đơn giản chỉ cần sử dụng lệnh fg ( viết tắt cho foreground) kết hợp với số thứ tự tiến trình mà bạn buốn back, ở đây đề muốn back về man jobs thì đơn giản chỉ cần chạy lệnh
 fg 2 thì nó sẽ ra
 
+<img width="659" height="443" alt="image" src="https://github.com/user-attachments/assets/8cc375e8-1b31-4b77-878a-dcb186687d00" />
+
+
 Cái man job ( hướng dẫn về job)
 - What is displayed now? ( When we quit man jobs)
-- Hiện tại nó chỉ show lên 2 tiến trình đang nằm ‘ngủ đông’
+- Hiện tại nó chỉ show lên 2 tiến trình đang nằm ngủ đông
+
+<img width="309" height="58" alt="image" src="https://github.com/user-attachments/assets/f0420d93-ae7c-422a-b491-36d304a1832b" />
+
 
 Bởi vì ta bấm q cho man jobs ( ta đã kết thúc terminate hoàn toàn của ct man ).
 - Which job now has the +?
+
+<img width="438" height="72" alt="image" src="https://github.com/user-attachments/assets/b56d02ea-7e1c-4779-a84e-aba1f9135d1a" />
+
+
+<img width="437" height="126" alt="image" src="https://github.com/user-attachments/assets/b0297e28-d625-408a-927e-89d504d797c9" />
+
 
 Như bạn có thể thấy jobs đầu tiên [1] bây giờ đang có dấu cộng
 Bởi vì trong Linux nói chung, centos nói riêng thì dấu (+) dùng để kí hiệu cho “current job”, nó là công việc vừa mới tạm dừng hoặc vừa được đưa vào chạy gần nhất
@@ -42,28 +74,49 @@ Dấu (-) thì dùng “previous job” (công việc kế trước đó)
 Bởi vì ta thực hiện fg1(foreground1) rồi ctrl+z nên hệ thống sẽ đánh dấu thằng job 1 là công việc vừa tương tác gần nhất nên nó có dấu (+)
 - Which job resumed? ( If we use fg?)
 
+
+<img width="650" height="142" alt="image" src="https://github.com/user-attachments/assets/eb2363a6-b727-4b2f-9eee-8ac4f6116c76" />
+
 Câu trả lời là lệnh xterm, nếu ta chỉ nhập fg mà ko có kèm tham số đằng sau, thì nó mặc định sẽ hiểu là fg +, như giải thích bên trên thì dấu + nó sẽ show ra tiến trình vừa tạm dừng là ‘xterm’.
 - Which will exit this job. What happened? ( When we type Ctrl + C)
 Khi đang chạy lệnh fg mà nhấn Ctrl + C thì tiến trình đó sẽ bị kill ngay lập tức, nôm na đơn giản là thằng xterm đang chạy ở foreground sẽ bị đóng hoàn toàn
+
+
+<img width="325" height="139" alt="image" src="https://github.com/user-attachments/assets/9b031fe1-6880-4de4-93c0-9bb168649556" />
 
 Có thể thấy không có job[1] nữa
 Ctrl + Z : Tạm dừng ( suspend), tức job vẫn còn đỏ chỉ là đang ngủ đông chờ fg gọi dậy
 Ctrl + C : Kill luôn, job ‘ngủ sâu’ mà ko dậy nữa, biến mất khỏi bộ nhớ và danh sách jobs.
 -Which job resumed? (When we type fg)
 
+<img width="654" height="444" alt="image" src="https://github.com/user-attachments/assets/d5cf96f2-4ff6-4554-b4d1-2ae86af18077" />
+
+
 Chỉ có thằng jobs[3] top là sẽ còn. Nên nó sẽ là thằng dấu (+) duy nhất vậy nên khi type fg thì nó sẽ đánh thức top. Do đó nó sẽ vào top
 Type q to quit this program. Type jobs, you should see nothing.
+
+<img width="649" height="390" alt="image" src="https://github.com/user-attachments/assets/abd89336-5ee6-4c5b-8dfd-af65ea329150" />
+
 
 Khi ta đã bấm q thì nó sẽ thoát luôn tiến trình top, do đó khi gõ jobs, sẽ ko còn cái nào show ra do các tiến trình đã kết thúc.
 d)
 -How does this differ from entering xterm without &?
 -Đầu tiên cứ thử nhập xterm trước, có thể thấy, khi bạn nhập xterm với ko tham số, thì thằng term (đen) sẽ bị khoá không thể gõ thêm lệnh nào khác cho tới khi cửa số term trắng đóng lại.
 
+<img width="376" height="161" alt="image" src="https://github.com/user-attachments/assets/210ec4c1-c859-482e-a31b-eb126dd30763" />
+
+
 - Kế tiếp hãy thử với xterm &
+
+
+<img width="482" height="190" alt="image" src="https://github.com/user-attachments/assets/f82da1ec-0a17-4d7b-8d1c-fd76d7d828f6" />
 
 Cửa sổ xterm vẫn mở ra, nhưng term đen sẽ có dấu prompt lệnh và cả term trắng cũng thế, Ta vẫn có thể tiếp tục gõ các lệnh khác trong khi xterm đang chạy
 - What is displayed? ( When we type find ~ -empty &)
 Khi nhập lệnh đó và ấn enter thì term sẽ hiển thị một thông báo cho biết tiến trình chạy ngầm đã hoàn thành
+
+
+<img width="648" height="390" alt="image" src="https://github.com/user-attachments/assets/07d71d1b-7535-4757-877f-92931bf5b940" />
 
 [1] …  Done ……
 Câu lệnh ‘find ~ -empty &’
@@ -78,16 +131,26 @@ Một cái Running (đang chạy), một cái stopped
 Job chạy ngầm nếu ta nhấn xterm &, còn job stopped là job bị nhấn ctrl _ z
 -What do the words “Running” and “Stopped” mean in jobs’ output.
 
+
+
+<img width="375" height="271" alt="image" src="https://github.com/user-attachments/assets/601bc2ca-ed6b-427c-9f51-6d2059ad2a95" />
+
 - Running nghĩa là tiến trình đang chạy bình thường dưới nền (background). Nó vẫn đang chiếm tài nguyên và thực thi nhiệm vụ.
 -Stopped là tiến trình đã bị tạm dừng hoạt động hoàn toàn, nó vẫn nằm trong bộ nhớ nhưng ko chạy chơi tới khi được đánh thức dậy bằng fg.
 
 - What is output?
 Output sẽ là trống
 
+
+<img width="344" height="110" alt="image" src="https://github.com/user-attachments/assets/453d83df-3032-4e88-a30c-41cc3a07f900" />
+
 Bởi vì ta đã exit hết tất cả jobs, giờ đây sẽ ko có còn tiến trình nào nữa.
 f.
 - What is displayed?
 Nó sẽ chả hiển thị ra gì hết, nếu còn jobs cũ từ câu trước chưa đóng thì sẽ show ra
+
+
+<img width="345" height="431" alt="image" src="https://github.com/user-attachments/assets/42c76877-1933-4d39-bfdc-44240ba15ff8" />
 
 -Why do you not see information on the 2 GUI processes?
 -Bởi vì lệnh jobs sẽ chỉ liệt kê và quản lí các tiến trình là con của shell hiện tại (tức có thể hiểu là những lệnh đc gõ và khởi chạy trực tiếp từ chính cửa sổ terminal đó.
@@ -96,6 +159,9 @@ What happens? (when we type bg top)
 Theo lí thuyết thì nó sẽ chuyển trạng thái của thằng top từ stopped sang running tức là nó sẽ chạy dưới dạng là chạy ngầm bg top ( tức là background)
 Nhưng mà điều thú vị là nó vẫn ở stopped
 Tóm gọn hệ thống cố đưa top vào chạy dưới nền, nhưng vì top yêu cầu quyền truy cập terminal để hiển thị dữu liệu nên nó bị hệ thống tạm dừng lại ngay lập tức.
+
+
+<img width="323" height="155" alt="image" src="https://github.com/user-attachments/assets/6b65258f-b3c9-43bd-8c3d-430ac4bb7668" />
 
 Has top’s status changed?
 Như bạn có thể thấy
