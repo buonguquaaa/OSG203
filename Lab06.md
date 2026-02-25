@@ -25,3 +25,13 @@ LAB06.01
 
 - Sửa file
 
+/ Step 2:
+
+<img width="375" height="30" alt="image" src="https://github.com/user-attachments/assets/6231d763-d548-4e46-a2e7-be67964b8cdd" />
+
+- Dùng nano tạo file script2
+
+<img width="481" height="134" alt="image" src="https://github.com/user-attachments/assets/ed1c130d-7da8-425d-847c-dec017e26b2a" />
+
+
+- Ctrl X để lưu và Crtl X để thoát
